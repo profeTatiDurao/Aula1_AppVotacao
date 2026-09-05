@@ -1,90 +1,140 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    background-color: #0d5fda;
-    color: #333;
+    background-color: #f2f4f8; /* Fundo clarinho */
+    min-height: 100vh;
     display: flex;
     justify-content: center;
-    padding: 2rem;
+    align-items: center;
+    padding: 20px;
 }
 
-.container {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+/* Moldura que simula o formato do celular da imagem */
+.celular-frame {
+    background-color: #ffffff;
     width: 100%;
-    max-width: 600px;
-}
-
-header {
-    text-align: center;
-    margin-bottom: 2rem;
+    max-width: 440px;
+    border: 3px solid #1a1a1a;
+    border-radius: 36px;
+    padding: 28px 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
 header h1 {
-    color: #e8581a;
-    margin-bottom: 0.5rem;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 24px;
 }
 
-/*estilize as tag h3 e h4*/
-
-.candidatos-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+/* Distribui os dois candidatos lado a lado */
+.candidatos-container {
+  
 }
 
-.candidato-card {
-    background: #ebb850;
-    border: 1px solid #0955a1;
-    border-radius: 8px;
-    padding: 15px;
+.candidato-coluna {
+   
+}
+
+/* Foto circular genérica com degradê suave */
+/* Container da foto circular */
+.foto-circular {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background-color: #e9ecef; 
+    border: 2px solid #a3b8f8;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    transition: transform 0.2s;
+    overflow: hidden; 
+    margin-bottom: 12px;
 }
 
-.candidato-card:hover {
-    transform: translateX(5px);
-    border-color: #1a73e8;
+
+.foto-circular img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Essa é a mágica que impede a foto de ficar achatada */
 }
 
-.info-candidato h2 {
-    font-size: 1.2rem;
+
+/* Caixa do nome do candidato */
+.caixa-nome {
+    
+}
+
+.caixa-nome .nome {
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #111;
+}
+
+/* Bolinha verde indicadora de voto */
+.bolinha-verde {
+    
+}
+
+.bolinha-verde.ativa {
+    
+}
+
+/* Caixa maior de propostas */
+.caixa-propostas {
+    width: 100%;
+    min-height: 170px;
+    border: 2px solid #111;
+    border-radius: 4px;
+    padding: 10px 8px;
+    background-color: #fff;
+    margin-bottom: 14px;
+}
+
+.titulo-propostas {
+    display: block;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.caixa-propostas ul {
+    padding-left: 18px;
+    font-size: 0.75rem;
+    line-height: 1.4;
     color: #333;
 }
 
-.info-candidato .votos {
-    font-size: 0.9rem;
-    color: #666;
-    margin-top: 5px;
-    font-weight: bold;
+.caixa-propostas li {
+    
 }
 
-button {
-    background-color: #e8621a;
-    color: white;
+/* Botões roxos com formato arredondado em destaque */
+.btn-votar {
+    width: 100%;
+    background: linear-gradient(180deg, #6f52d9 0%, #563bbd 100%);
+    color: #ffffff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 6px;
-    cursor: pointer;
+    border-radius: 18px;
+    padding: 9px 6px;
+    font-size: 0.78rem;
     font-weight: bold;
-    transition: background-color 0.2s;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(111, 82, 217, 0.35);
+    transition: transform 0.15s ease, opacity 0.2s ease;
 }
 
-button:hover {
-    background-color: #1557b0;
+.btn-votar:hover {
+    
 }
 
-.loading {
-    text-align: center;
-    color: #666;
+.btn-votar:active {
+   
 }
